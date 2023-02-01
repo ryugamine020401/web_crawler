@@ -53,9 +53,9 @@ if __name__ == "__main__":
         s1['A1'].value = 'TIME'  # 儲存格 A1 內容為 apple
         s1['B1'].value = 'GYM'  # 儲存格 A2 內容為 orange
         s1['C1'].value = 'SWIM'  # 儲存格 A3 內容為 banana
-        s1.cell(cnt, 8).value = (str(datetime.now())[:16])  # 儲存格 B1 內容 ( row=1, column=2 ) 為 100
-        s1.cell(cnt, 9).value = str(gym_peop[0])  # 儲存格 B2 內容 ( row=2, column=2 ) 為 200
-        s1.cell(cnt, 10).value = str(swim_peop[0])  # 儲存格 B3 內容 ( row=3, column=2 ) 為 300
+        s1.cell(cnt, 11).value = (str(datetime.now())[:16])  # 儲存格 B1 內容 ( row=1, column=2 ) 為 100
+        s1.cell(cnt, 12).value = str(gym_peop[0])  # 儲存格 B2 內容 ( row=2, column=2 ) 為 200
+        s1.cell(cnt, 13).value = str(swim_peop[0])  # 儲存格 B3 內容 ( row=3, column=2 ) 為 300
         cnt += 1
         s1.cell(1, 4).value = str(cnt)
         wb.save(file_name)
