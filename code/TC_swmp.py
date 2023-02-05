@@ -48,19 +48,20 @@ if __name__ == "__main__":
         swim_peop, gym_peop = re.findall(r"\d+", k[3]), re.findall(r"\d+", k[0])
         # print(swim_peop, gym_peop)
         # print(k)
-
-        print(cnt)
-        s1['A1'].value = 'TIME'  # 儲存格 A1 內容為 apple
-        s1['B1'].value = 'GYM'  # 儲存格 A2 內容為 orange
-        s1['C1'].value = 'SWIM'  # 儲存格 A3 內容為 banana
-        s1.cell(cnt, 20).value = (str(datetime.now())[:16])  # 儲存格 B1 內容 ( row=1, column=2 ) 為 100
-        s1.cell(cnt, 21).value = str(gym_peop[0])  # 儲存格 B2 內容 ( row=2, column=2 ) 為 200
-        s1.cell(cnt, 22).value = str(swim_peop[0])  # 儲存格 B3 內容 ( row=3, column=2 ) 為 300
-        cnt += 1
-        s1.cell(1, 4).value = str(cnt)
-        wb.save(file_name)
-
-
+        try:
+            print(cnt)
+            s1['A1'].value = 'TIME'  # 儲存格 A1 內容為 apple
+            s1['B1'].value = 'GYM'  # 儲存格 A2 內容為 orange
+            s1['C1'].value = 'SWIM'  # 儲存格 A3 內容為 banana
+            s1.cell(cnt, 23).value = (str(datetime.now())[:16])  # 儲存格 B1 內容 ( row=1, column=2 ) 為 100
+            s1.cell(cnt, 24).value = str(gym_peop[0])  # 儲存格 B2 內容 ( row=2, column=2 ) 為 200
+            s1.cell(cnt, 25).value = str(swim_peop[0])  # 儲存格 B3 內容 ( row=3, column=2 ) 為 300
+            cnt += 1
+            s1.cell(1, 4).value = str(cnt)
+            wb.save(file_name)
+        except:
+            print("檔案已被開啟無法寫入...。")
+            cnt -= 1
         time.sleep(300)
 
 
